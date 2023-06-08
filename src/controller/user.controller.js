@@ -29,10 +29,10 @@ const userController = {
 
 	getDetailUser: async (req, res) => {
 		try {
-			const { userId } = req.params;
+			const { id_user } = req.params;
 
 			await userModel
-				.getDetailUser(userId)
+				.getDetailUser(id_user)
 				.then((result) => {
 					delete result.rows[0].password;
 					response(
