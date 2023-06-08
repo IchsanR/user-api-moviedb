@@ -5,6 +5,5 @@ CREATE TABLE users(
   name text,
   email varchar(100),
   password text,
-  phone varchar(50),
-  profile_pic text
+  phone varchar(50)
 );

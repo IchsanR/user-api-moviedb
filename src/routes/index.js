@@ -5,13 +5,14 @@ const {
 	getAllUser,
 	userLogin,
 	updateAccount,
+	getDetailUser,
 } = require("../controller/user.controller");
 
 const userRouter = express.Router();
 
 userRouter
 	.get("/users", getAllUser)
-	.get("/users/:id_user", getAllUser)
+	.get("/users/:id_user", getDetailUser)
 	.post("/users", registerUser)
 	.post("/login", userLogin)
 	.patch("/users", jwtAuth, updateAccount);
